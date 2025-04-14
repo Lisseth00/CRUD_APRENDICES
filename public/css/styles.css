@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-    background-color:rgb(16, 192, 68);
+    background-color:rgb(0, 0, 0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -16,12 +16,12 @@ body {
 }
 
 .dropdown-menu {
-    background-color: rgb(11, 232, 48);
+    background-color: rgb(0, 5, 1);
     border: none;
 }
 
 .dropdown-item:hover {
-    background-color: #ebeef1;
+    background-color: #0ae11f;
 }
 
 .card-header {
