@@ -13,7 +13,7 @@
             try {
                 $id = $this->aprendizModel->crearAprendiz($data);
         
-                if ($id !== false and is_numeric($id)) {
+                if ($id !== false && is_numeric($id)) {
                     header("Location:show.php?id_aprendiz=" . $id);
                     exit();
                 } else {
