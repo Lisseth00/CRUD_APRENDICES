@@ -18,11 +18,11 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+  <nav class="navbar navbar-expand-lg navbar-dark mb-4 navbar-custom">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="/CRUD_APRENDICES/index.php">
-        <img src="/CRUD_APRENDICES/view/img/logoSena.png" alt="Logo SENA" width="35" height="30" class="me-2">
-        <span class="fw-bold">Gestión Aprendices</span>
+        <img src="/CRUD_APRENDICES/view/img/logoSena.png" alt="Logo SENA" width="55" height="60" class="me-2">
+        <span class="fw-bold fs-3">Guaviare SENA</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
         <span class="navbar-toggler-icon"></span>
@@ -31,10 +31,10 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="/CRUD_APRENDICES/index.php">Inicio</a>
+            <a class="nav-link fw-bold fs-4" href="/CRUD_APRENDICES/index.php">Inicio</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown- fw-bold" href="#" role="button" data-bs-toggle="dropdown">
+            <a class="nav-link dropdown- fw-bold fs-4" href="#" role="button" data-bs-toggle="dropdown">
               Aprendices
             </a>
             <ul class="dropdown-menu">
