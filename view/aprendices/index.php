@@ -6,7 +6,7 @@
 ?>
 
 <div class="mb-3">
-    <a href="/CRUD_APRENDICES/view/aprendices/crear.php" class="btn btn-success mb-3">
+    <a href="/CRUD_APRENDICES/view/aprendices/crear.php" class="btn btn-dark mb-3">
         Agregar un Nuevo Aprendiz
     </a>
 </div>
@@ -38,15 +38,15 @@
                         <td class="text-center"><?= $row['edad']; ?> años</td>
                         <td class="text-center">
                             <!-- Ver -->
-                            <a href="show.php?id=<?= $row['id'] ?>" class="btn btn-info btn-sm">
+                            <a href="show.php?id=<?= $row['id'] ?>" class="btn btn-info btn-dark">
                                 <i class="fas fa-eye"></i>
                             </a>
                             <!-- Editar -->
-                            <a href="editar.php?id=<?= $row['id'] ?>" class="btn btn-success btn-sm">
+                            <a href="editar.php?id=<?= $row['id'] ?>" class="btn btn-success btn-dark">
                                 <i class="fas fa-edit"></i>
                             </a>
                             <!-- Botón que lanza el modal -->
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $row['id'] ?>">
+                            <button class="btn btn-danger btn-peligro" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $row['id'] ?>">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </td>

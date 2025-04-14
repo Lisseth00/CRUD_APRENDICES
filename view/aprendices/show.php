@@ -13,13 +13,13 @@
 
             <!-- Botones -->
             <div class="mb-4 d-flex justify-content-center gap-3">
-                <a href="/CRUD_APRENDICES/view/aprendices/index.php" class="btn btn-primary">
+                <a href="/CRUD_APRENDICES/view/aprendices/index.php" class="btn btn-enlace">
                     <i class="fas fa-arrow-left"></i>
                 </a>
-                <a href="/CRUD_APRENDICES/view/aprendices/editar.php?id=<?= $date['id'] ?>" class="btn" style="background-color: #08b822; color: #fff;">
+                <a href="/CRUD_APRENDICES/view/aprendices/editar.php?id=<?= $date['id'] ?>" class="btn btn-enlace">
                     <i class="fas fa-edit"></i>
                 </a>
-                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                <button class="btn btn-enlace" data-bs-toggle="modal" data-bs-target="#deleteModal">
                     <i class="fas fa-trash-alt"></i>
                 </button>
             </div>
