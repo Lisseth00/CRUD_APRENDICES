@@ -1,81 +1,72 @@
 <?php
     require_once("C:/laragon/www/CRUD_APRENDICES/view/head/head.php");
-    require_once("C://laragon/www/CRUD_APRENDICES/controller/aprendizController.php");
+    require_once("C:/laragon/www/CRUD_APRENDICES/controller/aprendizController.php");
     $aprendiz = new AprendizController();
     $date= $aprendiz->show($_GET['id']);
 ?>
 <div class="container py-4">
-    <div class="card shadow-lg">
-        <div class="card-header bg-success text-white text-center">
+    <div class="card mb-4" style="background-color: #fff; border: 2px solid #08b822; border-radius: 10px;">
+        <div class="card-header text-white text-center" style="background-color: #08b822; border-radius: 8px 8px 0 0;">
             <h2 class="mb-0">Detalles del Aprendiz</h2>
         </div>
         <div class="card-body">
 
-            <!-- Botones de acción -->
+            <!-- Botones -->
             <div class="mb-4 d-flex justify-content-center gap-3">
                 <a href="/CRUD_APRENDICES/view/aprendices/index.php" class="btn btn-primary">
                     <i class="fas fa-arrow-left"></i>
                 </a>
-                <a href="/CRUD_APRENDICES/view/aprendices/editar.php?id=<?= $date['id'] ?>" class="btn btn-success">
-                    <i class="fas fa-edit"></i> 
+                <a href="/CRUD_APRENDICES/view/aprendices/editar.php?id=<?= $date['id'] ?>" class="btn" style="background-color: #08b822; color: #fff;">
+                    <i class="fas fa-edit"></i>
                 </a>
                 <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    <i class="fas fa-trash-alt"></i> 
+                    <i class="fas fa-trash-alt"></i>
                 </button>
             </div>
 
-            <!-- Tabla de detalles -->
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover table-striped">
-                    <thead class="table-dark text-center">
-                        <tr>
-                            <th colspan="2">Información Personal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><th>ID del Aprendiz</th><td><?= $date['id'] ?></td></tr>
-                        <tr><th>Primer Nombre</th><td><?= $date['primer_nombre'] ?></td></tr>
-                        <tr><th>Segundo Nombre</th><td><?= $date['segundo_nombre'] ?></td></tr>
-                        <tr><th>Primer Apellido</th><td><?= $date['primer_apellido'] ?></td></tr>
-                        <tr><th>Segundo Apellido</th><td><?= $date['segundo_apellido'] ?></td></tr>
-                    </tbody>
+            <!-- Información Personal -->
+            <div class="card mb-3" style="background-color: #fff; border: 1px solid #08b822;">
+                <div class="card-header text-white" style="background-color: #08b822;">Información Personal</div>
+                <div class="card-body">
+                    <p><strong>ID:</strong> <?= $date['id'] ?></p>
+                    <p><strong>Primer Nombre:</strong> <?= $date['primer_nombre'] ?></p>
+                    <p><strong>Segundo Nombre:</strong> <?= $date['segundo_nombre'] ?></p>
+                    <p><strong>Primer Apellido:</strong> <?= $date['primer_apellido'] ?></p>
+                    <p><strong>Segundo Apellido:</strong> <?= $date['segundo_apellido'] ?></p>
+                </div>
+            </div>
 
-                    <thead class="table-dark text-center">
-                        <tr>
-                            <th colspan="2">Identificación y Contacto</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><th>Tipo de Documento</th><td><?= $date['tipo_documento'] ?></td></tr>
-                        <tr><th>Número de Documento</th><td><?= $date['documento'] ?></td></tr>
-                        <tr><th>Teléfono</th><td><?= $date['telefono'] ?></td></tr>
-                        <tr><th>Correo Electrónico</th><td><?= $date['correo'] ?></td></tr>
-                    </tbody>
+            <!-- Identificación y Contacto -->
+            <div class="card mb-3" style="background-color: #fff; border: 1px solid #08b822;">
+                <div class="card-header text-white" style="background-color: #08b822;">Identificación y Contacto</div>
+                <div class="card-body">
+                    <p><strong>Tipo de Documento:</strong> <?= $date['tipo_documento'] ?></p>
+                    <p><strong>Número de Documento:</strong> <?= $date['documento'] ?></p>
+                    <p><strong>Teléfono:</strong> <?= $date['telefono'] ?></p>
+                    <p><strong>Correo Electrónico:</strong> <?= $date['correo'] ?></p>
+                </div>
+            </div>
 
-                    <thead class="table-dark text-center">
-                        <tr>
-                            <th colspan="2">Información Complementaria</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><th>Fecha de Nacimiento</th><td><?= $date['fecha_nacimiento'] ?></td></tr>
-                        <tr><th>Género</th><td><?= $date['genero'] ?></td></tr>
-                        <tr><th>Grupo Sanguíneo</th><td><?= $date['grupo_sanguineo'] ?></td></tr>
-                    </tbody>
+            <!-- Información Complementaria -->
+            <div class="card mb-3" style="background-color: #fff; border: 1px solid #08b822;">
+                <div class="card-header text-white" style="background-color: #08b822;">Información Complementaria</div>
+                <div class="card-body">
+                    <p><strong>Fecha de Nacimiento:</strong> <?= $date['fecha_nacimiento'] ?></p>
+                    <p><strong>Género:</strong> <?= $date['genero'] ?></p>
+                    <p><strong>Grupo Sanguíneo:</strong> <?= $date['grupo_sanguineo'] ?></p>
+                </div>
+            </div>
 
-                    <thead class="table-dark text-center">
-                        <tr>
-                            <th colspan="2">Programa de Formación</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><th>Nombre del Programa</th><td><?= $date['programa_formacion'] ?></td></tr>
-                        <tr><th>Numero de ficha</th><td><?= $date['numero_de_ficha'] ?></td></tr>
-                        <tr><th>Nivel de Formación</th><td><?= $date['nivel'] ?></td></tr>
-                        <tr><th>Fecha de Inicio</th><td><?= $date['fecha_inicio'] ?></td></tr>
-                        <tr><th>Fecha de Finalización</th><td><?= $date['fecha_fin'] ?></td></tr>
-                    </tbody>
-                </table>
+            <!-- Programa de Formación -->
+            <div class="card mb-3" style="background-color: #fff; border: 1px solid #08b822;">
+                <div class="card-header text-white" style="background-color: #08b822;">Programa de Formación</div>
+                <div class="card-body">
+                    <p><strong>Nombre del Programa:</strong> <?= $date['programa_formacion'] ?></p>
+                    <p><strong>Número de Ficha:</strong> <?= $date['numero_de_ficha'] ?></p>
+                    <p><strong>Nivel de Formación:</strong> <?= $date['nivel'] ?></p>
+                    <p><strong>Fecha de Inicio:</strong> <?= $date['fecha_inicio'] ?></p>
+                    <p><strong>Fecha de Finalización:</strong> <?= $date['fecha_fin'] ?></p>
+                </div>
             </div>
         </div>
     </div>
@@ -84,10 +75,10 @@
 <!-- Modal de confirmación de eliminación -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-danger text-white">
+        <div class="modal-content" style="border: 2px solid #08b822;">
+            <div class="modal-header text-white" style="background-color: #08b822;">
                 <h5 class="modal-title" id="deleteModalLabel">Confirmar Eliminación</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
                 <p>¿Está seguro que desea eliminar al aprendiz? Esta acción no se puede deshacer.</p>
@@ -100,7 +91,6 @@
     </div>
 </div>
 
-
 <?php
-require_once("C:/laragon/www/CRUD_APRENDICES/view/head/footer.php");
+    require_once("C:/laragon/www/CRUD_APRENDICES/view/head/footer.php");
 ?>

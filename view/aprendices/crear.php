@@ -1,44 +1,46 @@
 <?php
-    require_once ("C:/laragon/www/CRUD_APRENDICES/view/head/head.php");
+    require_once("C:/laragon/www/CRUD_APRENDICES/view/head/head.php");
 ?>
-    
-    <form action="store.php" method="POST" autocomplete="off">
 
-    <div class="card mb-4">
-        <div class="card-header bg-success text-white text-center py-3 rounded-top">
+<form action="store.php" method="POST" autocomplete="off" style="padding: 20px; border-radius: 12px; background-color: #fff;">
+
+    <div class="card mb-4" style="background-color: #fff; border: 2px solid #08b822; border-radius: 10px;">
+        <div class="card-header text-center text-white" style="background-color: #08b822; border-radius: 8px 8px 0 0;">
             <h2 class="mb-0">Formulario de Registro</h2>
             <p class="mt-1 mb-0 fs-5">Agregar un nuevo Aprendiz</p>
         </div>
     </div>
-    
-    <div class="card mb-4">
-        <div class="card-header bg-success">Información Personal</div>
+
+    <!-- Información Personal -->
+    <div class="card mb-4" style="background-color: #fff; border: 1px solid #08b822; border-radius: 10px;">
+        <div class="card-header text-white" style="background-color: #08b822;">Información Personal</div>
         <div class="card-body row g-3">
             <div class="col-md-3">
-                <label for="primer_nombre" class="form-label">Primer Nombre</label>
-                <input type="text" name="primer_nombre" class="form-control" required>
+                <label class="form-label text-dark">Primer Nombre</label>
+                <input type="text" name="primer_nombre" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" required>
             </div>
             <div class="col-md-3">
-                <label for="segundo_nombre" class="form-label">Segundo Nombre</label>
-                <input type="text" name="segundo_nombre" class="form-control">
+                <label class="form-label text-dark">Segundo Nombre</label>
+                <input type="text" name="segundo_nombre" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;">
             </div>
             <div class="col-md-3">
-                <label for="primer_apellido" class="form-label">Primer Apellido</label>
-                <input type="text" name="primer_apellido" class="form-control" required>
+                <label class="form-label text-dark">Primer Apellido</label>
+                <input type="text" name="primer_apellido" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" required>
             </div>
             <div class="col-md-3">
-                <label for="segundo_apellido" class="form-label">Segundo Apellido</label>
-                <input type="text" name="segundo_apellido" class="form-control">
+                <label class="form-label text-dark">Segundo Apellido</label>
+                <input type="text" name="segundo_apellido" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;">
             </div>
         </div>
     </div>
 
-    <div class="card mb-4">
-        <div class="card-header bg-success">Identificación y Contacto</div>
+    <!-- Identificación y Contacto -->
+    <div class="card mb-4" style="background-color: #fff; border: 1px solid #08b822; border-radius: 10px;">
+        <div class="card-header text-white" style="background-color: #08b822;">Identificación y Contacto</div>
         <div class="card-body row g-3">
             <div class="col-md-4">
-                <label for="id_tipo_documento" class="form-label">Tipo de Documento</label>
-                <select class="form-select" name="id_tipo_documento" required>
+                <label class="form-label text-dark">Tipo de Documento</label>
+                <select class="form-select" style="background-color: #f8f9fa; border: 1px solid #08b822;" name="id_tipo_documento" required>
                     <option value="" disabled selected>Seleccione una opción</option>
                     <option value="1">Tarjeta de identidad</option>
                     <option value="2">Cédula de ciudadania</option>
@@ -47,30 +49,31 @@
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="documento" class="form-label">Número de Documento</label>
-                <input type="text" name="documento" class="form-control" minlength="5" maxlength="10" required>
+                <label class="form-label text-dark">Número de Documento</label>
+                <input type="text" name="documento" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" required>
             </div>
             <div class="col-md-4">
-                <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-                <input type="date" name="fecha_nacimiento" class="form-control" required>
+                <label class="form-label text-dark">Fecha de Nacimiento</label>
+                <input type="date" name="fecha_nacimiento" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" required>
             </div>
             <div class="col-md-6">
-                <label for="correo" class="form-label">Correo Electrónico</label>
-                <input type="email" name="correo" class="form-control" autocomplete="on" required>
+                <label class="form-label text-dark">Correo Electrónico</label>
+                <input type="email" name="correo" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" required>
             </div>
             <div class="col-md-6">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" name="telefono" class="form-control" pattern="[0-9]{7,10}" required>
+                <label class="form-label text-dark">Teléfono</label>
+                <input type="tel" name="telefono" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" pattern="[0-9]{7,10}" required>
             </div>
         </div>
     </div>
 
-    <div class="card mb-4">
-        <div class="card-header bg-success">Información Complementaria</div>
+    <!-- Información Complementaria -->
+    <div class="card mb-4" style="background-color: #fff; border: 1px solid #08b822; border-radius: 10px;">
+        <div class="card-header text-white" style="background-color: #08b822;">Información Complementaria</div>
         <div class="card-body row g-3">
             <div class="col-md-6">
-                <label for="id_genero" class="form-label">Género</label>
-                <select class="form-select" name="id_genero" required>
+                <label class="form-label text-dark">Género</label>
+                <select class="form-select" style="background-color: #f8f9fa; border: 1px solid #08b822;" name="id_genero" required>
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Masculino</option>
                     <option value="2">Femenino</option>
@@ -78,8 +81,8 @@
                 </select>
             </div>
             <div class="col-md-6">
-                <label for="id_grupo_sanguineo" class="form-label">Grupo Sanguíneo</label>
-                <select class="form-select" name="id_grupo_sanguineo" required>
+                <label class="form-label text-dark">Grupo Sanguíneo</label>
+                <select class="form-select" style="background-color: #f8f9fa; border: 1px solid #08b822;" name="id_grupo_sanguineo" required>
                     <option value="" disabled>Seleccione una opción</option>
                     <option value="1">A+</option>
                     <option value="2">A-</option>
@@ -94,12 +97,13 @@
         </div>
     </div>
 
-    <div class="card mb-4">
-        <div class="card-header bg-success">Programa de Formación</div>
+    <!-- Programa de Formación -->
+    <div class="card mb-4" style="background-color: #fff; border: 1px solid #08b822; border-radius: 10px;">
+        <div class="card-header text-white" style="background-color: #08b822;">Programa de Formación</div>
         <div class="card-body row g-3">
             <div class="col-md-4">
-                <label for="programa" class="form-label">Programa</label>
-                <select class="form-select" name="programa" required>
+                <label class="form-label text-dark">Programa</label>
+                <select class="form-select" style="background-color: #f8f9fa; border: 1px solid #08b822;" name="programa" required>
                     <optgroup label="Técnicos">
                         <option value="1">Técnico en Sistemas</option>
                         <option value="2">Técnico en Asistencia Administrativa</option>
@@ -119,20 +123,21 @@
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="fecha_inicio" class="form-label">Fecha de Inicio</label>
-                <input type="date" name="fecha_inicio" class="form-control" required>
+                <label class="form-label text-dark">Fecha de Inicio</label>
+                <input type="date" name="fecha_inicio" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" required>
             </div>
             <div class="col-md-4">
-                <label for="fecha_fin" class="form-label">Fecha de Finalización</label>
-                <input type="date" name="fecha_fin" class="form-control" required>
+                <label class="form-label text-dark">Fecha de Finalización</label>
+                <input type="date" name="fecha_fin" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" required>
             </div>
         </div>
     </div>
 
-    <div class=" text-center mt-4">
-        <button type="submit" class="btn btn-primary me-2">Guardar</button>
-        <a class="btn btn-danger" href="index.php">Cancelar</a>
+    <div class="text-center mt-4">
+        <button type="submit" class="btn" style="background-color: #08b822; color: #fff; border-radius: 6px;">Guardar</button>
+        <a class="btn btn-danger" href="index.php" style="border-radius: 6px;">Cancelar</a>
     </div>
+
 </form>
 
 <?php
