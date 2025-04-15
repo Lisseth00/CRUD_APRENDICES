@@ -4,7 +4,7 @@
     $aprendiz = new AprendizController();
     $date= $aprendiz->show($_GET['id']);
 ?>
-<form action="update.php?id=<?= $date['id'] ?>" method="POST" autocomplete="off"> class="container py-4">
+<form action="update.php?id=<?= $date['id'] ?>" method="POST" autocomplete="off"> <class="container py-4">
 
     <div class="card mb-4" style="background-color: #fff; border: 2px solid #08b822; border-radius: 10px;">
         <div class="card-header text-center text-white" style="background-color: #08b822; border-radius: 8px 8px 0 0;">

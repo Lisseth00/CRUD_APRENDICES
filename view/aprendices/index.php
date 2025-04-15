@@ -1,6 +1,7 @@
 <?php
     require_once("C:/laragon/www/CRUD_APRENDICES/view/head/head.php");
     require_once("C://laragon/www/CRUD_APRENDICES/controller/aprendizController.php");
+
     $aprendiz = new AprendizController();
     $rows = $aprendiz->index();
 ?>
@@ -13,9 +14,9 @@
 
 <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover table-sm table-light">
-        <thead class=" table-dark">
+        <thead class="table-dark">
             <tr>
-                <th class="text-center">ID</th>
+                <th class="text-center">#</th>
                 <th class="text-center">Nombre</th>
                 <th class="text-center">Apellido</th>
                 <th class="text-center">Tipo de Documento</th>
@@ -27,9 +28,10 @@
         </thead>
         <tbody class="table-group-divider">
             <?php if ($rows): ?>
+                <?php $i = 1; ?> <!-- contador secuencial -->
                 <?php foreach ($rows as $row): ?>
                     <tr>
-                        <td class="text-center"><?= $row['id']; ?></td>
+                        <td class="text-center"><?= $i++; ?></td> <!-- numeración secuencial -->
                         <td class="text-center"><?= $row['Nombre']; ?></td>
                         <td class="text-center"><?= $row['Apellido']; ?></td>
                         <td class="text-center"><?= $row['Tipo_documento']; ?></td>
@@ -45,7 +47,7 @@
                             <a href="editar.php?id=<?= $row['id'] ?>" class="btn btn-success btn-dark">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <!-- Botón que lanza el modal -->
+                            <!-- Eliminar -->
                             <button class="btn btn-danger btn-peligro" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $row['id'] ?>">
                                 <i class="fas fa-trash"></i>
                             </button>
@@ -83,3 +85,4 @@
 <?php
     require_once("C:/laragon/www/CRUD_APRENDICES/view/head/footer.php");
 ?>
+
