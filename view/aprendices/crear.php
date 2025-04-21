@@ -62,7 +62,7 @@
             </div>
             <div class="col-md-6">
                 <label class="form-label text-dark">Teléfono</label>
-                <input type="tel" name="telefono" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" pattern="[0-9]{7,10}" required>
+                <input type="tel" name="telefono" class="form-control" style="background-color: #f8f9fa; border: 1px solid #08b822;" pattern="[0-9]{7,10}" title="Ingresa un número de teléfono de 7 a 10 dígitos sin espacios ni símbolos" required>
             </div>
         </div>
     </div>
